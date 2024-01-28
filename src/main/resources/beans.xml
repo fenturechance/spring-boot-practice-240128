@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="TestInterface" class="com.example.demo.TestClass1"></bean>
+    <bean id="TestInterface" class="com.example.demo.TestClass1">
+        <constructor-arg name="testStringProp" value="IamTest"/>
+    </bean>
 
 </beans>
