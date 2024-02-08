@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.beans.factory.xml.XmlReaderContext;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.example")
 public class DemoApplication {
 
     public static void main(String[] args) {
@@ -41,7 +41,12 @@ public class DemoApplication {
 //        TestClass1 testClass1 = context.getBean(TestClass1.class);
 //        System.out.println(testClass1);
 
-        SpringApplication.run(DemoApplication.class, args);
+        //java 10局部變量自動推斷
+        var ioc = SpringApplication.run(DemoApplication.class, args);
+        String[] names = ioc.getBeanDefinitionNames();
+        for (String name: names) {
+            System.out.println(name);
+        }
     }
 
 }
