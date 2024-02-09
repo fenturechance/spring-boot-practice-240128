@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.beans.factory.xml.XmlReaderContext;
 
-@SpringBootApplication(scanBasePackages = "com.example")
+@SpringBootApplication
 public class DemoApplication {
 
     public static void main(String[] args) {
@@ -43,10 +43,14 @@ public class DemoApplication {
 
         //java 10局部變量自動推斷
         var ioc = SpringApplication.run(DemoApplication.class, args);
-        String[] names = ioc.getBeanDefinitionNames();
-        for (String name: names) {
-            System.out.println(name);
-        }
+//        String[] names = ioc.getBeanDefinitionNames();
+//        for (String name: names) {
+//            System.out.println(name);
+//        }
+        String[] forType = ioc.getBeanNamesForType(User.class);
+        Object user1 = ioc.getBean("UserConfigNameInContainer");
+        Object user2 = ioc.getBean("UserConfigNameInContainer");
+        System.out.println(user1 == user2); //如果scope是prototype的話，就會不同
     }
 
 }
