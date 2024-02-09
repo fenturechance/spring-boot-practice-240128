@@ -52,12 +52,14 @@ public class DemoApplication {
 //        Object user2 = ioc.getBean("UserConfigNameInContainer");
 //        System.out.println(user1 == user2); //如果scope是prototype的話，就會不同
 
-        for (String s: ioc.getBeanNamesForType(Cat.class)) {
-            System.out.println("cat" + s);
-        }
-        for (String s: ioc.getBeanNamesForType(Dog.class)) {
-            System.out.println("dog" + s);
-        }
+//        for (String s: ioc.getBeanNamesForType(Cat.class)) {
+//            System.out.println("cat" + s);
+//        }
+//        for (String s: ioc.getBeanNamesForType(Dog.class)) {
+//            System.out.println("dog" + s);
+//        }
+        Pig pig = ioc.getBean(Pig.class);
+        System.out.println(pig.toString());
     }
 
 }
