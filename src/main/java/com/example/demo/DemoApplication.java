@@ -47,10 +47,17 @@ public class DemoApplication {
 //        for (String name: names) {
 //            System.out.println(name);
 //        }
-        String[] forType = ioc.getBeanNamesForType(User.class);
-        Object user1 = ioc.getBean("UserConfigNameInContainer");
-        Object user2 = ioc.getBean("UserConfigNameInContainer");
-        System.out.println(user1 == user2); //如果scope是prototype的話，就會不同
+//        String[] forType = ioc.getBeanNamesForType(User.class);
+//        Object user1 = ioc.getBean("UserConfigNameInContainer");
+//        Object user2 = ioc.getBean("UserConfigNameInContainer");
+//        System.out.println(user1 == user2); //如果scope是prototype的話，就會不同
+
+        for (String s: ioc.getBeanNamesForType(Cat.class)) {
+            System.out.println("cat" + s);
+        }
+        for (String s: ioc.getBeanNamesForType(Dog.class)) {
+            System.out.println("dog" + s);
+        }
     }
 
 }
