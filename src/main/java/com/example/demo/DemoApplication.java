@@ -60,8 +60,10 @@ public class DemoApplication {
 //        }
 //        Pig pig = ioc.getBean(Pig.class);
 //        System.out.println(pig.toString());
-        Sheep sheep = ioc.getBean(Sheep.class);
-        System.out.println(sheep.toString());
+//        Sheep sheep = ioc.getBean(Sheep.class);
+//        System.out.println(sheep.toString());
+        Person person = ioc.getBean(Person.class);
+        System.out.println("person"+ person);
     }
 
 }

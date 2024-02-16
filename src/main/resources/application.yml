@@ -1,0 +1,13 @@
+pig:
+  id: 1
+  name: 佩奇
+  age: 5
+sheep:
+  id: 1
+  name: 蘇西
+  age: 5
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
