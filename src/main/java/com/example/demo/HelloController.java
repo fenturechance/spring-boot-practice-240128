@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.apache.juli.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -24,5 +25,11 @@ public class HelloController {
     public String increment() {
         Long haha = redisTemplate.opsForValue().increment("haha");
         return "增加後的值" + haha;
+    }
+
+    @GetMapping("/log")
+    public String log() {
+        LogFactory.getLog(HelloController.class).info("這是info");
+        return "log";
     }
 }
