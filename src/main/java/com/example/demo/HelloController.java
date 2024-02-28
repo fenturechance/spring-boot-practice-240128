@@ -31,8 +31,8 @@ public class HelloController {
     }
 
     @GetMapping("/log")
-    public String log() {
-        log.info("info");
+    public String log(String a, String b) {
+        log.info("info, a: {}, b: {}", a, b);
         return "log";
     }
 }
