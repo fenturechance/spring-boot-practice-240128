@@ -44,4 +44,9 @@ public class HelloController {
         dog.setName("小黑");
         return dog;
     }
+
+    @GetMapping("/well")
+    public String helloPage() {
+        return "welcomePage";
+    }
 }
