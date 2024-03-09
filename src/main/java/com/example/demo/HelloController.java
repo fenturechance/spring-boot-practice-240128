@@ -35,4 +35,13 @@ public class HelloController {
         log.info("info, a: {}, b: {}", a, b);
         return "log";
     }
+
+    @GetMapping("/dog")
+    public Dog dog() {
+        Dog dog = new Dog();
+        dog.setId(1L);
+        dog.setAge(2);
+        dog.setName("小黑");
+        return dog;
+    }
 }
