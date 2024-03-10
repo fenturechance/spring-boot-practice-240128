@@ -38,14 +38,14 @@ public class HelloController {
         return "log";
     }
 
-    @GetMapping("/dog")
-    public Dog dog() {
-        Dog dog = new Dog();
-        dog.setId(1L);
-        dog.setAge(2);
-        dog.setName("小黑");
-        return dog;
-    }
+//    @GetMapping("/dog")
+//    public Dog dog() {
+//        Dog dog = new Dog();
+//        dog.setId(1L);
+//        dog.setAge(2);
+//        dog.setName("小黑");
+//        return dog;
+//    }
 
     @GetMapping("/well")
     public String helloPage(@RequestParam("name") String name, Model model) {

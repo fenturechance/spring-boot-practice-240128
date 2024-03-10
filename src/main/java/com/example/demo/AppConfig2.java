@@ -16,9 +16,9 @@ public class AppConfig2 {
         return new Cat();
     }
 
-    @ConditionalOnMissingClass(value="com.example.demo.Dog")
-    @Bean
-    public Dog dog1() {
-        return new Dog();
-    }
+//    @ConditionalOnMissingClass(value="com.example.demo.Dog")
+//    @Bean
+//    public Dog dog1() {
+//        return new Dog();
+//    }
 }
