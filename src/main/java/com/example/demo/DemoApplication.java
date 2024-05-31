@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.beans.factory.xml.XmlReaderContext;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class DemoApplication {
 
     public static void main(String[] args) {
